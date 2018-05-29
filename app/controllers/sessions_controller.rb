@@ -3,6 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
+    if session[:name].nil?
+      redirect_to :new
   end
 
   def destroy
